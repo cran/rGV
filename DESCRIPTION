@@ -1,0 +1,24 @@
+Package: rGV
+Version: 0.0.1
+Date: 2022-07-21
+Title: Analysis of Continuous Glucose Monitor Data
+Authors@R: c(person("Evan", "Olawsky", role = c("aut", "cre"),
+                     email = "evanolawsky@gmail.com"),
+             person("Yuan", "Zhang", role = "ctb"),
+	     person("Lynn", "Eberly", role = "ctb"))
+Author: Evan Olawsky [aut, cre],
+  Yuan Zhang [ctb],
+  Lynn Eberly [ctb]
+Maintainer: Evan Olawsky <evanolawsky@gmail.com>
+Depends: R (>= 3.2.0), chron
+Description: Reads in continuous glucose monitor data of many different formats, calculates a host of glycemic variability metrics, and plots glucose over time. 
+License: MIT + file LICENSE
+Encoding: UTF-8
+Suggests: testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Imports: pastecs, zoo
+RoxygenNote: 7.1.1
+NeedsCompilation: no
+Packaged: 2022-07-21 15:50:48 UTC; overlord
+Repository: CRAN
+Date/Publication: 2022-07-21 17:40:02 UTC
