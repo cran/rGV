@@ -187,24 +187,30 @@ modd <- function(x, times, s=1, method="manuscript") {
 #' @examples
 #' mage(x=c(rep(100, 10), rep(120, 10), 105, 85), times=seq(0, 1260, 60))
 mage <- function(x, times) {
-  smoothed_values <- as.numeric(zoo::rollapply(zoo::zoo(x), 9,
-                                               function(y) c(1, 2, 4, 8, 16, 8, 4, 2, 1) %*%
-                                                 (y / 46), fill = NA))
-  smoothed_values[1:4] <- mean(stats::na.omit(x[1:4]))
-  ti <- length(smoothed_values)
-  smoothed_values[(ti - 3):ti] <- mean(x[(length(x) - 3):length(x)])
-  sd <- stats::sd(x)
-  turns <- pastecs::turnpoints(smoothed_values)
-  peaks <- which(turns[["peaks"]] == TRUE)
-  troughs <- which(turns[["pits"]] == TRUE)
-  if (turns[["firstispeak"]] == TRUE && length(peaks) != length(troughs)) {
-    peaks <- peaks[2:base::length(peaks)]
-  }
-  else if (turns[["firstispeak"]] == FALSE && length(peaks) != length(troughs)) {
-    troughs <- troughs[1:(length(troughs) - 1)]
-  }
-  differences <- x[peaks] - x[troughs]
+  x=c(rep(100,10),rep(120,10),105,85)
+  times=seq(0,1260,60)
 
+  smoothed_values <- vector()
+  smoothed_values[1:4] <- mean(stats::na.omit(x[1:4]))
+  for (i in 5:(length(x)-4)){
+    smoothed_values[i] <- (1*x[i - 4] + 2*x[i - 3] + 4*x[i - 2] + 8*x[i - 1] + 16*x[i] +
+                             8*x[i + 1] + 4*x[i + 2] + 2*x[i + 3] + 1*x[i + 4]) / 46
+  }
+  ti <- length(smoothed_values)
+  smoothed_values[(ti + 1):(ti + 4)] <- mean(x[(length(x) - 3):length(x)])
+  sd <- stats::sd(x)
+
+  u <- unique(smoothed_values)
+  n <- length(u)
+  v1 <- c(0,u[2:n] - u[1:(n - 1)])
+  v2 <- c(u[2:n] - u[1:(n - 1)],0)
+
+  peaks <- which(v1 > 0 & v2 < 0)
+  troughs <- which(v1 < 0 & v2 > 0)
+  if (length(peaks) > length(troughs)) troughs <- append(troughs, 1)
+  if (length(peaks) < length(troughs)) peaks <- append(peaks, 1)
+
+  differences <- u[peaks] - u[troughs]
   mean(stats::na.omit(differences[which(differences > sd)]))
 }
 

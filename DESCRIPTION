@@ -1,6 +1,6 @@
 Package: rGV
-Version: 0.0.1
-Date: 2022-07-21
+Version: 0.0.2
+Date: 2022-09-17
 Title: Analysis of Continuous Glucose Monitor Data
 Authors@R: c(person("Evan", "Olawsky", role = c("aut", "cre"),
                      email = "evanolawsky@gmail.com"),
@@ -16,9 +16,8 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 Suggests: testthat (>= 3.0.0)
 Config/testthat/edition: 3
-Imports: pastecs, zoo
 RoxygenNote: 7.1.1
 NeedsCompilation: no
-Packaged: 2022-07-21 15:50:48 UTC; overlord
+Packaged: 2022-09-17 15:32:23 UTC; overlord
 Repository: CRAN
-Date/Publication: 2022-07-21 17:40:02 UTC
+Date/Publication: 2022-09-19 22:56:12 UTC
