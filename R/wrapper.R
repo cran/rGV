@@ -61,10 +61,9 @@ GV <- function(x, times, unit="mg", m_index=120, k=60, s=1, conga_n=1, interval=
                    m7_1[3], m7_1[4], m8_1, m9, m10_1, NA, m11_1, m12, m13, m14, m15, m16, m17, m18, m19, m20, m21, m22, m23), use.names=FALSE)
   vec3 <- unlist(c(m1, m2, m3_2, m4, m5, m6_2[1], m6_2[2], m7_2[1], m7_2[2],
                    m7_2[3], m7_2[4], m8_2, m9, m10_2[1], m10_2[2], m11_2, m12, m13, m14, m15, m16, m17, m18, m19, m20, m21, m22, m23), use.names=FALSE)
-  results <- as.data.frame(cbind(vec1, vec2, vec3))
+  results <- data.frame(vec1, vec2, vec3)
   names(results) <- c("Measure", "Manuscript", "EasyGV")
-  results$Manuscript <- round(as.numeric(levels(results$Manuscript))[results$Manuscript],2)
-  results$EasyGV <- round(as.numeric(levels(results$EasyGV))[results$EasyGV],2)
-
+  results$Manuscript <- round(results$Manuscript, 2)
+  results$EasyGV <- round(results$EasyGV, 2)
   results
 }
