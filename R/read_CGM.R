@@ -81,7 +81,7 @@ read_cgm <- function(file, timezero="first", na.rm=TRUE, skip=0,
   if (timezero != "first" & timezero != "midnight") {
     timezero.date <- gsub(paste0(time_sep, ".*$"), "", timezero)
     timezero.time <- gsub(paste0(".*", time_sep), "", timezero)
-    if (switch <- 1) {
+    if (switch == 1) {
       timezero.time <- paste0(timezero.time, ":00")
     }
     timezero <- chron::chron(dates=timezero.date, times=timezero.time, format=time_format)
@@ -97,7 +97,7 @@ read_cgm <- function(file, timezero="first", na.rm=TRUE, skip=0,
     # change sensor_times vector to chron format
     date_of_sensor <- gsub(paste0(time_sep, ".*$"), "", sensor_times)
     time_of_sensor <- gsub(paste0(".*", time_sep), "", sensor_times)
-    if (switch <- 1) {
+    if (switch == 1) {
       time_of_sensor <- paste0(time_of_sensor, ":00")
     }
     sensor_chron <- c(data$datetime[1],

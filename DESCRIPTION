@@ -1,6 +1,6 @@
 Package: rGV
-Version: 0.0.3
-Date: 2022-12-06
+Version: 0.0.4
+Date: 2023-01-16
 Title: Analysis of Continuous Glucose Monitor Data
 Authors@R: c(person("Evan", "Olawsky", role = c("aut", "cre"),
                      email = "evanolawsky@gmail.com"),
@@ -18,6 +18,6 @@ Suggests: testthat (>= 3.0.0)
 Config/testthat/edition: 3
 RoxygenNote: 7.1.1
 NeedsCompilation: no
-Packaged: 2022-12-07 00:36:57 UTC; overlord
+Packaged: 2023-01-16 23:55:46 UTC; overlord
 Repository: CRAN
-Date/Publication: 2022-12-07 00:50:02 UTC
+Date/Publication: 2023-01-17 00:20:02 UTC

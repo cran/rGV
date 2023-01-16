@@ -433,6 +433,9 @@ num_events <- function(x, times, thresh=55, len=15, gap=5) {
       time2 <- c(time2, times[i-1])
     }
   }
+  if (length(time2) < length(time1)) {
+    time2 <- append(time2, max(times))
+  }
   total_time <- time_on(times, gap=gap) / (60 * 24)
   length(which(time2 - time1 > len)) / total_time
 }

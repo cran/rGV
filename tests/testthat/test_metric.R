@@ -50,7 +50,7 @@ test_that("TIR works", {
 })
 
 test_that("num_events works", {
-  expect_equal(num_events(x=c(100,110,120,90,80), times=c(0,60,120,180,240), thresh=120, len=60), 0)
+  expect_equal(num_events(x=c(100,110,120,90,80), times=c(0,60,120,180,240), thresh=55, len=60), 0)
 })
 
 test_that("GVP works", {

@@ -1,10 +1,10 @@
-9a370d776807efcaa45d4c6c82dec813 *DESCRIPTION
+45d507c01e7b96db100e18bdd2a633e7 *DESCRIPTION
 7cc48f4283cf97d79f6d7915418eb6e7 *LICENSE
 800f436458d08c124b295ce05bad6931 *NAMESPACE
-423d180a44e574d9ef66a8e20508b19d *NEWS.md
-86dcd602be44655437e17a31059f88bc *R/metrics.R
+a30a1698af6b27c23726cdc821558783 *NEWS.md
+bb7b69a514c00d7f7f13bf6c1a2f2675 *R/metrics.R
 7517dcabb06b5da3065709381675816d *R/plot.R
-2dae88d49b0183ba99590c7caddeed09 *R/read_CGM.R
+43931f4f16d5d52207643a2fb86d085a *R/read_CGM.R
 d813b13447d17b9ce4a902d2dfcdf1c5 *R/wrapper.R
 b2fc0e14de63928bf1145be7028ae4ad *README.md
 4a7e920775918ce74f061a410069f8b3 *man/GV.Rd
@@ -32,4 +32,4 @@ d8c14bd104fc837723906bfe8530abaa *man/mag.Rd
 f4b445f77cdbe0a3d8c35a56aed289d3 *man/time_on.Rd
 b8b99bacd09cf4659c0e51ad64e01fc6 *man/tir.Rd
 01604bce47ac4ddc580fa5d92e10d696 *tests/testthat.R
-9a128ce937f7670eedcc8d9593b701dc *tests/testthat/test_metric.R
+5a3d9ad15008181e9716e24d63e8926b *tests/testthat/test_metric.R
