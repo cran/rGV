@@ -1,0 +1,16 @@
+bibentry(
+  bibtype  = "Article",
+  title    = "Analysis of Continuous Glucose Monitor Data",
+  author   = c(person("Evan", "Olawsky"),
+               person("Yuan", "Zhang"),
+	             person(c("Lynn", "E"), "Eberly"),
+	             person(c("Erika", "S"), "Helgeson"),
+	             person(c("Lisa", "S"), "Chow")),
+  journal  = "Journal of Diabetes Science and Technology",
+  year     = "2022",
+  volume   = "16",
+  number   = "6",
+  pages    = "1496-1504",
+  doi      = "10.1177/19322968211028909",
+  Header   = "To cite rGV in publications use:"
+)

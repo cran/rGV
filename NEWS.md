@@ -1,3 +1,3 @@
 # rGV 0.0.4
-* Fixed a bug in the num_events() function that caused faulty outputs when the data ends on a hypoglycemic event
-* Fixed two typos in the read_cgm() function. Assignment (<-) had mistakenly been used in two places instead of equality (==).
+* Fixed the num_events() function to return an integer number of events rather than a percentage of events over time.
+* Fixed a typo in the mage() function that was hardwiring a specific example dataset.

@@ -187,9 +187,6 @@ modd <- function(x, times, s=1, method="manuscript") {
 #' @examples
 #' mage(x=c(rep(100, 10), rep(120, 10), 105, 85), times=seq(0, 1260, 60))
 mage <- function(x, times) {
-  x=c(rep(100,10),rep(120,10),105,85)
-  times=seq(0,1260,60)
-
   smoothed_values <- vector()
   smoothed_values[1:4] <- mean(stats::na.omit(x[1:4]))
   for (i in 5:(length(x)-4)){
@@ -437,7 +434,7 @@ num_events <- function(x, times, thresh=55, len=15, gap=5) {
     time2 <- append(time2, max(times))
   }
   total_time <- time_on(times, gap=gap) / (60 * 24)
-  length(which(time2 - time1 > len)) / total_time
+  length(which(time2 - time1 > len))
 }
 
 #' Calculate Glycemic Variability Percentage (GVP)
